@@ -3,59 +3,50 @@
 ## Login Screen
 
 ```dart
-class _LoginForm extends StatelessWidget {
+import 'package:flutter/material.dart';
+
+class LoginScreen extends StatelessWidget {
+
+  const LoginScreen({Key? key}) : super(key: key);
+
+  static const String routeName = 'Login';
+
 
   @override
   Widget build(BuildContext context) {
+    return Scaffold(
+      body: AuthBackground(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const SizedBox(height: 250),
+              CardContainer(
+                child: Column(
+                  children: [
 
-    final loginProvider = Provider.of<LoginProvider>(context);
-
-    return Container(
-      
-      child: Form(  
-        key: loginProvider.formKey,
-        autovalidateMode: AutovalidateMode.onUserInteraction,
-        child: Column(
-          children: [
-            
-            // <-- Input Email -->
-            TextFormField(
-              autocorrect: false,
-              keyboardType: TextInputType.emailAddress,
-              decoration: InputDecorations.authInput(
-                hintText: 'example@gmail.com',
-                labelText: 'Email',
-                prefixIcon: Icons.alternate_email
+                    const SizedBox( height: 10 ),
+                    Text('Login', style: Theme.of(context).textTheme.headline4,),
+                    
+                    const SizedBox( height: 30 ),
+                    ChangeNotifierProvider( 
+                      create: ( _ ) => LoginProvider(),
+                      child: _LoginForm(),
+                    )
+                    
+                  ],
+                ),
               ),
-              onChanged: ( value ) => loginProvider.email = value,
-              validator: ( value ) => Validators.email(value) ,
-            ),
-            
-            const SizedBox( height: 30 ),
-            
-            // <-- Input Paswword -->
-            TextFormField(
-              obscureText: true,
-              autocorrect: false,
-              keyboardType: TextInputType.emailAddress,
-              decoration: InputDecorations.authInput(
-                hintText: 'Password',
-                labelText: 'Contraseña',
-                prefixIcon: Icons.lock_outline
-              ),
-              onChanged: ( value ) => loginProvider.password = value,
-              validator: ( value ) => Validators.pass(value) ,
-            ),
+              const SizedBox( height: 50 ),
+              const Text('Crear nueva cuenta', style: TextStyle( fontSize: 18, fontWeight: FontWeight.w300 ) ),
+              const SizedBox( height: 50 ),
 
-            const SizedBox( height: 30 ),
-
-            _LoginButton(loginProvider: loginProvider)
-
-          ],
-        ),
+            ],
+          ),
+        )
       ),
     );
   }
+
 }
 ```
 ## Form:
