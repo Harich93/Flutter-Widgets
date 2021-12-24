@@ -1,5 +1,15 @@
 # Login
 
+Los widgets son independientes, juntos forman el login completo.
+
+## Background
+
+Fondo para login
+
+## Card
+
+Container redondeado para insertarle el formulario.
+
 ## Formulario
 
 Necesario para vista completa
@@ -8,7 +18,5 @@ Necesario para vista completa
 - Provider pra validación reactiva.
 - (opcional) Tema para inputs.
 
-## Background
 
-Fondo para login
 
