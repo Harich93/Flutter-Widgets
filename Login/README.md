@@ -2,15 +2,15 @@
 
 Los widgets son independientes, juntos forman el login completo.
 
-## Background
+### Background
 
 Fondo para login
 
-## Card
+### Card
 
 Container redondeado para insertarle el formulario.
 
-## Formulario
+### Formulario
 
 Necesario para vista completa
 
