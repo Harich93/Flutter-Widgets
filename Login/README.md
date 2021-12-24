@@ -2,7 +2,7 @@
 
 Los widgets son independientes, juntos forman el login completo.
 
---- Background
+-- Background
 
 Fondo para login
 
