@@ -1,2 +1,3 @@
 # Flutter--Widgets
-Widgets reutilizables para Flutter
+
+Widgets con sus configuraciones necesarias.
