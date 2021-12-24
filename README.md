@@ -1,3 +1,3 @@
-# Flutter--Widgets
+# Widgets
 
 Widgets con sus configuraciones necesarias.
