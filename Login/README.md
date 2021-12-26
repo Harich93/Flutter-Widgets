@@ -15,7 +15,7 @@ Container redondeado para insertarle el formulario.
 Necesario para vista completa
 
 - Plantilla formulario login. 
-- Provider pra validación reactiva.
+- Provider para validación reactiva.
 - (opcional) Tema para inputs.
 
 
